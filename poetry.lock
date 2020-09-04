@@ -106,10 +106,6 @@ requests = ">=2.18.0,<3.0.0dev"
 setuptools = ">=34.0.0"
 six = ">=1.10.0"
 
-[package.dependencies.grpcio]
-optional = true
-version = ">=1.29.0,<2.0dev"
-
 [package.extras]
 grpc = ["grpcio (>=1.29.0,<2.0dev)"]
 grpcgcp = ["grpcio-gcp (>=0.2.2)"]
@@ -567,10 +563,10 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [extras]
-bigquery = ["google-cloud-bigquery", "google-cloud-bigquery-storage"]
+bigquery = ["google-cloud-bigquery", "google-cloud-bigquery-storage", "grpcio"]
 
 [metadata]
-content-hash = "f6465a11ff05ec00c1a7726b18529707fa363d1a88d63126b26931b428f6476e"
+content-hash = "7bb94f73fb6dcde681cbe6d60055d044bf336aaa20c66fe28f99ed78200c3b39"
 lock-version = "1.0"
 python-versions = "^3.7"
 
