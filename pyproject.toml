@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "lowclouds"
-version = "0.1.1"
+version = "0.1.2"
 description = "The lowclouds is a shortcut library for several cloud service libraries."
 readme = "README.md"
 authors = ["rhoboro <rhoboro@gmail.com>"]
@@ -12,6 +12,7 @@ google-cloud-bigquery = {version = "^1.27.2", optional = true}
 google-cloud-bigquery-storage = {version = "^1.0.0", optional = true}
 grpcio = {version = "^1.31.0", optional = true}
 boto3 = {version = "^1.14.55", optional = true}
+google-cloud-storage = {version = "^1.31.0", optional = true}
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
@@ -21,6 +22,7 @@ pytest-mock = "^3.3.1"
 
 [tool.poetry.extras]
 bigquery=["google-cloud-bigquery", "google-cloud-bigquery-storage", "grpcio"]
+gcs=["google-cloud-storage"]
 s3=["boto3"]
 
 [tool.black]

@@ -223,6 +223,19 @@ grpc = ["grpcio (>=1.8.2,<2.0dev)"]
 
 [[package]]
 category = "main"
+description = "Google Cloud Storage API client library"
+name = "google-cloud-storage"
+optional = true
+python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*"
+version = "1.31.0"
+
+[package.dependencies]
+google-auth = ">=1.11.0,<2.0dev"
+google-cloud-core = ">=1.4.1,<2.0dev"
+google-resumable-media = ">=1.0.0,<2.0dev"
+
+[[package]]
+category = "main"
 description = "A python wrapper of the C library 'Google CRC32C'"
 marker = "python_version >= \"3.5\""
 name = "google-crc32c"
@@ -646,10 +659,11 @@ testing = ["jaraco.itertools", "func-timeout"]
 
 [extras]
 bigquery = ["google-cloud-bigquery", "google-cloud-bigquery-storage", "grpcio"]
+gcs = ["google-cloud-storage"]
 s3 = ["boto3"]
 
 [metadata]
-content-hash = "4a004c0c47a2bfea9a4d0a1098c2436e1fb83be65c4c45b41a3aa0b09bccc793"
+content-hash = "1d26ad57a2230a03e7fd4cbaf8c0b6d08c0c8970624815ac873756075efc90d4"
 lock-version = "1.0"
 python-versions = "^3.7"
 
@@ -752,6 +766,10 @@ google-cloud-bigquery-storage = [
 google-cloud-core = [
     {file = "google-cloud-core-1.4.1.tar.gz", hash = "sha256:613e56f164b6bee487dd34f606083a0130f66f42f7b10f99730afdf1630df507"},
     {file = "google_cloud_core-1.4.1-py2.py3-none-any.whl", hash = "sha256:4c9e457fcfc026fdde2e492228f04417d4c717fb0f29f070122fb0ab89e34ebd"},
+]
+google-cloud-storage = [
+    {file = "google-cloud-storage-1.31.0.tar.gz", hash = "sha256:4f51c7700242a9d54c07117f25fec5d110ab85435b3ce60ac28cc553f8ea938b"},
+    {file = "google_cloud_storage-1.31.0-py2.py3-none-any.whl", hash = "sha256:34fb8f7e8a2a633cbfb09d8dec38b3450c4029af1a328a67bca64f6226a1f4a5"},
 ]
 google-crc32c = [
     {file = "google-crc32c-1.0.0.tar.gz", hash = "sha256:9439b960b6ecd847557675d130fc3626d762bf535da595c20a6949a705fb3eae"},
