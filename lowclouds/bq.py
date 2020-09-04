@@ -11,11 +11,11 @@ def _get_client(project: str = None) -> Client:
 
 def query(
     sql: str,
+    timeout: int = None,
     destination_dataset: str = None,
     destination_table: str = None,
-    project: str = None,
-    timeout: int = None,
     append: bool = False,
+    project: str = None,
 ) -> str:
     """クエリを実行します"""
 
